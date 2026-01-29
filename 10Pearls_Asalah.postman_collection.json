@@ -1,0 +1,444 @@
+{
+  "info": {
+    "_postman_id": "bd2940cd-fa25-4e5f-905b-9579ce9f71cf",
+    "name": "10Pearls_Asalah",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44533590",
+    "_collection_link": "https://go.postman.co/collection/44533590-bd2940cd-fa25-4e5f-905b-9579ce9f71cf?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "testing GET",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/objects",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "testing GET with IDs",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/objects?id=2&id=4&id=10",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "2"
+            },
+            {
+              "key": "id",
+              "value": "4"
+            },
+            {
+              "key": "id",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "testing GEt with single ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/objects/3",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "testing POST",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"name\": \"Apple MacBook Pro 16\",\r\n   \"data\": {\r\n      \"year\": 2019,\r\n      \"price\": 1849.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"1 TB\"\r\n   }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/objects",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "testing POST 2",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"name\": \"Asalah's iPhone\",\r\n   \"data\": {\r\n      \"year\": 2026,\r\n      \"price\": 1400.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"256 GB\"\r\n   }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/objects",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "testing PUT",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"name\": \"Samsung tab\",\r\n   \"data\": {\r\n      \"year\": 2020,\r\n      \"price\": 500.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"64 GB\",\r\n      \"color\": \"Black\"\r\n   }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/objects/ff8081819782e69e019c0ad962e31d25",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects",
+            "ff8081819782e69e019c0ad962e31d25"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "testing PATCH",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"name\": \"Asalah's iPad\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/objects/ff8081819782e69e019c0ad962e31d25",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects",
+            "ff8081819782e69e019c0ad962e31d25"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "data to delete",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"name\": \"test data to delete\",\r\n   \"data\": {\r\n      \"year\": 2019,\r\n      \"price\": 1849.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"1 TB\"\r\n   }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/objects",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "testing DELETE",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/objects/ff8081819782e69e019c0aee00bd1d62",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects",
+            "ff8081819782e69e019c0aee00bd1d62"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "post-request script",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "const response = pm.response.json();\r",
+              "console.log(\"Created Object ID: \" + response.id);\r",
+              "\r",
+              "pm.environment.set(\"objectId\", response.id);\r",
+              "\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Check if Name is correct\", function () {\r",
+              "    pm.expect(response.name).to.eql(\"Apple MacBook Pro 16\");\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Verify ID is exactly 123\", function () {\r",
+              "    pm.expect(response.id).to.eql(\"123\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"name\": \"Test Object\",\r\n   \"data\": {\r\n      \"year\": 2024,\r\n      \"price\": 100,\r\n      \"CPU model\": \"Intel Core i5\",\r\n      \"Hard disk size\": \"4 TB\"\r\n   }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/objects",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "pre-request script",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "exec": [
+              "const timestamp = new Date().toISOString();\r",
+              "\r",
+              "pm.variables.set(\"requestTime\", timestamp);\r",
+              "\r",
+              "console.log(\"Request is being sent at: \" + timestamp);\r",
+              "\r",
+              "const randomNote = \"Postman-Testing-\" + Math.random().toString(36).substring(7);\r",
+              "pm.variables.set(\"customNote\", randomNote);"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \"name\": \"Apple MacBook Pro 16\",\r\n   \"data\": {\r\n      \"year\": 2026,\r\n      \"price\": 1849.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"1 TB\",\r\n      \"processedAt\": \"{{requestTime}}\",\r\n      \"internalNote\": \"{{customNote}}\"\r\n   }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/objects",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test wrong URL",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/objectss",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objectss"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "test wrong input",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n   \r\n   \"data\": {\r\n      \"year\": 2026,\r\n      \"price\": 1849.99,\r\n      \"CPU model\": \"Intel Core i9\",\r\n      \"Hard disk size\": \"1 TB\",\r\n   }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseURL}}/objects",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "failing test case",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "\r",
+              "pm.test(\"Status code is 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Response contains success message\", function () {\r",
+              "    const jsonData = pm.response.json();\r",
+              "    pm.expect(jsonData.message).to.contain(\"has been deleted\");\r",
+              "});\r",
+              "\r",
+              "\r",
+              "pm.test(\"Verify server header is 'NASA'\", function () {\r",
+              "    pm.expect(pm.response.headers.get(\"Server\")).to.eql(\"NASA\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseURL}}/objects/ff8081819782e69e019c0b5716a21ec1",
+          "host": [
+            "{{baseURL}}"
+          ],
+          "path": [
+            "objects",
+            "ff8081819782e69e019c0b5716a21ec1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseURL",
+      "value": ""
+    }
+  ]
+}
